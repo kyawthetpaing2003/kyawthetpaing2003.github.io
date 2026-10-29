@@ -391,36 +391,13 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
   <section id="reviews">
     <div class="eyebrow">TESTIMONIALS</div>
     <h2>Ratings &amp; <span class="accent">Reviews</span></h2>
-    <div class="sub">Used one of my services? Leave a rating — it helps me a lot. Reviews are checked before they appear here.</div>
-    <div class="card"><div class="bd">
-      <form id="reviewForm">
-        <div class="fld">
-          <label>Your rating</label>
-          <div class="stars">
-            <input type="radio" id="s5" name="Rating" value="5 stars" required><label for="s5">★</label>
-            <input type="radio" id="s4" name="Rating" value="4 stars"><label for="s4">★</label>
-            <input type="radio" id="s3" name="Rating" value="3 stars"><label for="s3">★</label>
-            <input type="radio" id="s2" name="Rating" value="2 stars"><label for="s2">★</label>
-            <input type="radio" id="s1" name="Rating" value="1 star"><label for="s1">★</label>
-          </div>
-        </div>
-        <div class="fld"><label>Your name</label><input type="text" name="Name" required placeholder="e.g. Aung Aung"></div>
-        <div class="fld"><label>Service you used</label>
-          <select name="Service">
-            <option>AI Video Creation</option><option>AI Video Editing</option><option>Graphic Design</option>
-            <option>AI Prompt Services</option><option>Monthly Content Package</option>
-            <option>Facebook Account Recovery</option><option>Social Media Account Service</option>
-            <option>Monetization Service</option><option>Other</option>
-          </select>
-        </div>
-        <div class="fld"><label>Your review</label><textarea name="Review" required placeholder="How was the service?"></textarea></div>
-        <button class="btn gold" type="submit" style="width:100%;border:none;cursor:pointer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></svg> Submit Review</button>
-        <p style="color:var(--mut);font-size:13px;text-align:center;margin-top:10px">Submitting opens your email app with the review ready to send.</p>
-      </form>
-    </div></div>
-    <div class="empty">No reviews yet — be the first to share your experience 🙏<br><br>
-      <a class="btn ghost" href="https://t.me/+_IZ2JCjsZyw0Y2I9" style="min-height:50px">💬 Or review in our Telegram Community</a>
+    <div class="sub">Used one of my services? Leave a rating — it helps me a lot. Reviews are checked first, then appear here automatically.</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px">
+      <a class="btn gold" href="https://senja.io/p/kyawthetpaing2003/r/8CFHVv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></svg> Write a Review</a>
+      <a class="btn ghost" href="https://t.me/+_IZ2JCjsZyw0Y2I9">💬 Or review in our Telegram Community</a>
     </div>
+    <script src="https://widget.senja.io/widget/6edbb40e-4f9f-481c-8b1d-afd1dcd12627/platform.js" type="text/javascript" async></script>
+    <div class="senja-embed" data-id="6edbb40e-4f9f-481c-8b1d-afd1dcd12627" data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
   </section>
 
   <!-- BOOK -->
@@ -450,12 +427,6 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
   els.forEach(function(el){ io.observe(el); });
 })();
 
-document.getElementById('reviewForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var f = new FormData(this);
-  var body = 'Rating: ' + (f.get('Rating') || '') + '\nName: ' + (f.get('Name') || '') + '\nService: ' + (f.get('Service') || '') + '\n\nReview:\n' + (f.get('Review') || '');
-  window.location.href = 'mailto:kophyoe.id2025@gmail.com?subject=' + encodeURIComponent('⭐ New review from the portfolio website') + '&body=' + encodeURIComponent(body);
-});
 </script>
 </body>
 </html>
