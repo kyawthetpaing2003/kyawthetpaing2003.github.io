@@ -17,6 +17,9 @@
 <meta name="twitter:title" content="Mr Kyaw Thet Paing — AI Video Creation & Editing">
 <meta name="twitter:description" content="AI Video Creation & Editing services by Ai Global Technology. Order on Telegram @AGTREMOTECRAFT202">
 <meta name="twitter:image" content="https://kyawthetpaing2003.github.io/og.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#070d1a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;700&display=swap" rel="stylesheet">
@@ -165,6 +168,20 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 /* course */
 .course-facts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
 .course-facts span{background:rgba(255,207,92,.1);border:1px solid rgba(255,207,92,.4);color:#ffe1a1;font-size:13.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+/* scroll reveal (JS adds .rv only when JS runs — content never hidden without it) */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+/* work gallery */
+.work-grid{display:grid;gap:12px}
+@media (min-width:560px){.work-grid{grid-template-columns:1fr 1fr 1fr}}
+.work-card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.work-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.work-card .wb{padding:13px 15px}
+.work-card b{font-family:Poppins,sans-serif;font-size:15px;display:block}
+.work-card small{color:var(--mut);font-size:12.5px}
+.work-card .wp{display:inline-flex;align-items:center;gap:5px;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:5px}
+.work-card .wp svg{width:13px;height:13px}
 @media (min-width:560px){.cta{grid-template-columns:1fr 1fr}.stats{gap:12px}h1{font-size:37px}}
 </style>
 </head>
@@ -247,6 +264,27 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
     </div>
   </section>
 
+  <!-- WORK GALLERY -->
+  <section id="work">
+    <div class="eyebrow">PORTFOLIO</div>
+    <h2>My <span class="accent">Work</span></h2>
+    <div class="sub">Watch what I create — new videos and posts every week.</div>
+    <div class="work-grid">
+      <a class="work-card" href="https://www.youtube.com/watch?v=kTqX1XT4E0I">
+        <img src="https://i.ytimg.com/vi/kTqX1XT4E0I/hqdefault.jpg" alt="YouTube video thumbnail" loading="lazy">
+        <div class="wb"><span class="wp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.2v7.6L16.5 12 10 8.2Z" fill="currentColor" stroke="none"/></svg> YOUTUBE</span><b>Tutorials &amp; Tech Videos</b><small>Step-by-step guides in Burmese</small></div>
+      </a>
+      <a class="work-card" href="https://www.tiktok.com/@aiglobaltechnology">
+        <img src="studio.jpg" alt="TikTok short-form video creation" loading="lazy">
+        <div class="wb"><span class="wp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.2v7.6L16.5 12 10 8.2Z" fill="currentColor" stroke="none"/></svg> TIKTOK</span><b>Short-form Videos</b><small>41.7K followers · 655 videos</small></div>
+      </a>
+      <a class="work-card" href="https://t.me/UCEXPRLFcGdB8NmrrTut6Wwg">
+        <img src="about.jpg" alt="Telegram daily knowledge posters" loading="lazy">
+        <div class="wb"><span class="wp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> TELEGRAM</span><b>Daily Knowledge Posts</b><small>Posters, quizzes &amp; tech news</small></div>
+      </a>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
     <div class="eyebrow">ABOUT</div>
@@ -274,6 +312,19 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
       <span>Hook &amp; Retention Editing</span><span>Subtitles (Myanmar / English)</span>
       <span>Text Animation</span><span>Sound Design</span><span>Thumbnails &amp; Posters</span>
       <span>AI Image / Video Prompts</span><span>Script Writing</span><span>Mobile Software Service</span>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <div class="eyebrow">MY TOOLKIT</div>
+    <h2>Tools I <span class="accent">Use</span></h2>
+    <div class="sub">The apps behind my mobile-first workflow.</div>
+    <div class="mini">
+      <div class="row"><span class="ic-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span><div><h4>CapCut</h4><p>My main editor — cutting, hooks, subtitles, text animation and sound design for every video.</p></div></div>
+      <div class="row"><span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.9 9 19.5 10.9 13.9 12.8 12 18.3 10.1 12.8 4.5 10.9 10.1 9 12 3.5Z"/><path d="M19 16.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg></span><div><h4>AI Video Tools</h4><p>AI generation tools for presenter videos, product promos and story scenes in my AI Video Creation service.</p></div></div>
+      <div class="row"><span class="ic-tile t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="m8 15.5 3.6-4 2.8 2.4 4.1-4.9"/><path d="M15.8 8.8h2.9v2.9"/></svg></span><div><h4>YouTube Studio</h4><p>Analytics and revenue tracking — how I learn what my audience loves and grow the channel.</p></div></div>
+      <div class="row"><span class="ic-tile t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg></span><div><h4>Telegram</h4><p>My community home — daily knowledge posts, client delivery and course lessons.</p></div></div>
     </div>
   </section>
 
@@ -388,6 +439,17 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 </div>
 <a class="float-order" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order a Service</a>
 <script>
+// scroll reveal — progressive enhancement only
+(function(){
+  var els = document.querySelectorAll('section, .card, .work-card');
+  if (!('IntersectionObserver' in window)) return;
+  els.forEach(function(el){ el.classList.add('rv'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.08 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+
 document.getElementById('reviewForm').addEventListener('submit', function(e){
   e.preventDefault();
   var f = new FormData(this);
