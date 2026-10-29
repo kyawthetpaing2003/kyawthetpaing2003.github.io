@@ -5,124 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mr Kyaw Thet Paing — Portfolio</title>
 <meta name="description" content="Mr Kyaw Thet Paing — AI Content Creator, Video Editor, Mobile Software Technician. Ai Global Technology. AI Video Creation & AI Video Editing services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0b1220; --bg2:#0e1a30; --card:#111e33; --card2:#0d1830;
-  --line:rgba(120,180,255,.16); --txt:#eaf2fd; --mut:#9db2cf;
-  --cyan:#38e1ff; --gold:#ffcf5c; --radius:22px;
+  --bg:#070d1a; --card:rgba(255,255,255,.045); --card2:rgba(255,255,255,.03);
+  --line:rgba(148,197,255,.14); --txt:#eef4ff; --mut:#9db0cf;
+  --cyan:#38e1ff; --blue:#2f8bff; --violet:#8b7bff; --gold:#ffcf5c;
+  --grad:linear-gradient(92deg,#19b8dd,#38e1ff 55%,#8b7bff);
+  --gradgold:linear-gradient(92deg,#e8a90c,#ffcf5c);
+  --r:24px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Myanmar",sans-serif;
-  background:linear-gradient(170deg,var(--bg) 0%,var(--bg2) 55%,var(--bg) 100%);
-  color:var(--txt);-webkit-text-size-adjust:100%;line-height:1.55}
+body{font-family:Inter,"Noto Sans Myanmar",-apple-system,sans-serif;color:var(--txt);line-height:1.6;
+  background:
+    radial-gradient(640px 420px at 88% -60px, rgba(139,123,255,.28), transparent 62%),
+    radial-gradient(720px 520px at -10% 240px, rgba(56,225,255,.16), transparent 60%),
+    radial-gradient(560px 420px at 50% 115%, rgba(255,207,92,.07), transparent 60%),
+    var(--bg);
+  background-attachment:fixed;-webkit-text-size-adjust:100%}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px 40px}
+h1,h2,h3,.logo{font-family:Poppins,"Noto Sans Myanmar",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 44px}
 
 /* header */
-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
-  background:rgba(9,15,28,.82);border-bottom:1px solid var(--line)}
-.hbar{max-width:720px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-weight:800;letter-spacing:.4px;font-size:17px}
-.logo span{color:var(--cyan)}
-.bookbtn{background:linear-gradient(90deg,#19b8dd,#38e1ff);color:#04222e;font-weight:800;
-  padding:11px 18px;border-radius:999px;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(7,13,26,.78);border-bottom:1px solid var(--line)}
+.hbar{max-width:720px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:700;font-size:17px;letter-spacing:.3px;display:flex;align-items:center;gap:9px}
+.logo .dot{width:34px;height:34px;border-radius:11px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:15px;color:#04222e;font-weight:800;box-shadow:0 6px 18px rgba(56,225,255,.35)}
+.logo em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bookbtn{background:var(--grad);color:#03222e;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14.5px;min-height:44px;display:inline-flex;align-items:center;box-shadow:0 8px 22px rgba(56,225,255,.3)}
 
 /* hero */
-.hero{padding:22px 0 6px;text-align:center}
-.hero-photo{border-radius:26px;overflow:hidden;border:1px solid var(--line);
-  box-shadow:0 18px 50px rgba(0,0,0,.5),0 0 0 6px rgba(56,225,255,.05)}
-.hero-photo img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:center 22%}
-h1{font-size:30px;line-height:1.2;margin:20px 0 2px}
+.hero{padding:26px 0 4px;text-align:center}
+.hero-photo{position:relative;border-radius:28px;padding:3px;background:linear-gradient(160deg,rgba(56,225,255,.65),rgba(139,123,255,.5) 45%,rgba(255,207,92,.45));box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.hero-photo img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:center 22%;border-radius:25px}
+.kicker{display:inline-flex;align-items:center;gap:7px;margin-top:22px;padding:7px 14px;border-radius:999px;border:1px solid rgba(56,225,255,.35);background:rgba(56,225,255,.08);color:#bfeaff;font-size:12.5px;font-weight:600;letter-spacing:1.6px}
+.kicker i{width:7px;height:7px;border-radius:50%;background:#37f2a2;display:inline-block;box-shadow:0 0 10px #37f2a2}
+h1{font-size:32px;line-height:1.18;margin:14px 0 2px;font-weight:800;letter-spacing:.2px}
+h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .mm{color:var(--mut);font-size:16px}
-.role{color:var(--cyan);font-weight:700;font-size:16.5px;margin-top:8px}
-.tag{color:var(--mut);font-style:italic;font-size:15px;margin-top:6px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0 6px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 4px}
-.stat b{display:block;font-size:19px}
-.stat i{font-style:normal;color:var(--mut);font-size:11px;letter-spacing:.3px}
+.role{font-weight:600;font-size:15.5px;margin-top:10px;color:#d9e7fb}
+.tag{color:var(--mut);font-style:italic;font-size:14.5px;margin-top:5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:22px 0 4px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:13px 4px;backdrop-filter:blur(6px)}
+.stat b{display:block;font-size:19px;font-family:Poppins,sans-serif;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat i{font-style:normal;color:var(--mut);font-size:10.5px;letter-spacing:.6px;font-weight:600}
 .cta{display:grid;gap:10px;margin:16px 0 4px}
-.btn{min-height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:9px;
-  font-size:17px;font-weight:800;padding:14px 18px}
-.btn.primary{background:linear-gradient(90deg,#19b8dd,#38e1ff);color:#04222e}
-.btn.ghost{border:1.5px solid rgba(56,225,255,.5);color:var(--cyan);background:rgba(56,225,255,.06)}
-.btn.gold{background:linear-gradient(90deg,#e8a90c,#ffcf5c);color:#332400}
+.btn{min-height:56px;border-radius:17px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:16.5px;font-weight:700;padding:14px 18px;font-family:Poppins,Inter,sans-serif}
+.btn svg{width:20px;height:20px}
+.btn.primary{background:var(--grad);color:#03222e;box-shadow:0 12px 28px rgba(56,225,255,.28)}
+.btn.ghost{border:1.5px solid rgba(56,225,255,.45);color:var(--cyan);background:rgba(56,225,255,.05)}
+.btn.gold{background:var(--gradgold);color:#332400;box-shadow:0 12px 26px rgba(255,190,40,.22)}
+.visits{margin-top:16px;text-align:center;color:var(--mut);font-size:13.5px;display:flex;align-items:center;justify-content:center;gap:7px}
+.visits svg{width:17px;height:17px;color:var(--cyan)}
+.visits img{display:inline-block;height:22px;border-radius:5px}
 
 /* sections */
-section{margin-top:34px}
-h2{font-size:21px;letter-spacing:.6px;margin-bottom:4px}
-h2 .accent{color:var(--cyan)}
-.sub{color:var(--mut);font-size:14.5px;margin-bottom:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:16px}
+section{margin-top:38px}
+.eyebrow{color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:2.6px;margin-bottom:5px}
+h2{font-size:23px;font-weight:700;margin-bottom:4px}
+h2 .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);font-size:14.5px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:16px;backdrop-filter:blur(6px);box-shadow:0 16px 40px rgba(0,0,0,.32)}
 .card .ph{width:100%;aspect-ratio:16/10;object-fit:cover}
-.card .bd{padding:18px}
-.badge{display:inline-block;background:linear-gradient(90deg,#e8a90c,#ffcf5c);color:#332400;
-  font-size:12px;font-weight:900;letter-spacing:.8px;padding:5px 11px;border-radius:999px;margin-bottom:10px}
-.card h3{font-size:21px;margin-bottom:2px}
-.price{color:var(--gold);font-weight:800;font-size:17px;margin:4px 0 10px}
+.card .bd{padding:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--gradgold);color:#332400;font-size:11.5px;font-weight:800;letter-spacing:1px;padding:6px 12px;border-radius:999px;margin-bottom:12px}
+.badge svg{width:13px;height:13px}
+.svc-head{display:flex;align-items:center;gap:13px;margin-bottom:4px}
+.ic-tile{width:50px;height:50px;flex:0 0 50px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff}
+.ic-tile svg{width:26px;height:26px}
+.t-cyan{background:linear-gradient(135deg,#0ea5c9,#38e1ff);box-shadow:0 8px 20px rgba(56,225,255,.3)}
+.t-violet{background:linear-gradient(135deg,#6d5cff,#a78bff);box-shadow:0 8px 20px rgba(139,123,255,.32)}
+.t-gold{background:linear-gradient(135deg,#d99406,#ffcf5c);box-shadow:0 8px 20px rgba(255,190,40,.3);color:#3a2a00}
+.t-pink{background:linear-gradient(135deg,#e0497e,#ff7eb0);box-shadow:0 8px 20px rgba(255,110,160,.3)}
+.t-green{background:linear-gradient(135deg,#0d9d6c,#3ddc97);box-shadow:0 8px 20px rgba(50,220,150,.3)}
+.t-blue{background:linear-gradient(135deg,#2563eb,#5ea0ff);box-shadow:0 8px 20px rgba(70,140,255,.32)}
+.card h3{font-size:20.5px;font-weight:700}
+.price{color:var(--gold);font-weight:700;font-size:16.5px;margin:3px 0 9px;font-family:Poppins,sans-serif}
 .card p{color:var(--mut);font-size:15px}
-ul.ticks{list-style:none;margin:12px 0 16px}
-ul.ticks li{padding-left:28px;position:relative;margin-bottom:8px;font-size:15px;color:#d7e4f5}
-ul.ticks li:before{content:"✓";position:absolute;left:0;top:0;color:var(--cyan);font-weight:900}
-.mini{display:grid;gap:12px}
-.mini .row{background:var(--card2);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
-.mini h4{font-size:17px;margin-bottom:3px}
-.mini p{color:var(--mut);font-size:14.5px}
-.mini .p2{color:var(--gold);font-weight:700;font-size:14.5px;margin-top:6px}
+ul.ticks{list-style:none;margin:12px 0 18px}
+ul.ticks li{padding-left:30px;position:relative;margin-bottom:9px;font-size:15px;color:#dce8f8}
+ul.ticks li .ck{position:absolute;left:0;top:2px;width:19px;height:19px;border-radius:6px;background:rgba(56,225,255,.14);color:var(--cyan);display:flex;align-items:center;justify-content:center}
+ul.ticks li .ck svg{width:12px;height:12px}
+.mini{display:grid;gap:11px}
+.mini .row{background:var(--card2);border:1px solid var(--line);border-radius:19px;padding:16px 17px;display:flex;gap:14px;align-items:flex-start}
+.mini .ic-tile{width:46px;height:46px;flex-basis:46px;border-radius:14px}
+.mini .ic-tile svg{width:23px;height:23px}
+.mini h4{font-size:16.5px;font-weight:600;font-family:Poppins,sans-serif;margin-bottom:2px}
+.mini p{color:var(--mut);font-size:14px}
+.mini .p2{color:var(--gold);font-weight:600;font-size:14px;margin-top:6px}
 
 /* channels */
 .chan{display:grid;gap:10px}
-.chan a{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);
-  border-radius:18px;padding:14px 16px;min-height:64px}
-.chan .ic{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
-.chan .ic svg{width:25px;height:25px;fill:#fff}
-.chan b{font-size:16.5px;display:block}
+.chan a{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:19px;padding:14px 16px;min-height:66px;backdrop-filter:blur(6px)}
+.chan .ic{width:45px;height:45px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex:0 0 45px;box-shadow:0 8px 18px rgba(0,0,0,.35)}
+.chan .ic svg{width:24px;height:24px;fill:#fff}
+.chan b{font-size:16px;display:block;font-family:Poppins,sans-serif;font-weight:600}
 .chan small{color:var(--mut);font-size:13px}
-.chan .go{margin-left:auto;color:var(--cyan);font-size:20px}
+.chan .go{margin-left:auto;color:var(--cyan);font-size:22px}
 .tg{background:#229ed9}.yt{background:#ff0033}.tt{background:#161823}.fb{background:#1877f2}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 
 /* about / misc */
-.about-photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);margin-bottom:14px}
+.about-photo{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-bottom:14px}
 .about-photo img{width:100%;aspect-ratio:16/11;object-fit:cover}
-.duo{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.duo img{width:104px;height:104px;border-radius:18px;object-fit:cover;flex:0 0 104px}
+.duo{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px}
+.duo img{width:102px;height:102px;border-radius:19px;object-fit:cover;flex:0 0 102px}
 .duo p{color:var(--mut);font-size:14.5px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{background:rgba(56,225,255,.08);border:1px solid rgba(56,225,255,.3);color:#cfeeff;
-  font-size:13.5px;padding:8px 13px;border-radius:999px}
-.tl{display:grid;gap:12px}
-.tl .job{background:var(--card2);border:1px solid var(--line);border-radius:18px;padding:15px 18px}
-.tl .when{color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:.6px}
-.tl .what{font-weight:800;font-size:16.5px;margin:2px 0}
+.chips span{background:rgba(56,225,255,.07);border:1px solid rgba(56,225,255,.28);color:#cfeeff;font-size:13.5px;padding:8px 14px;border-radius:999px;font-weight:500}
+.tl{display:grid;gap:11px}
+.tl .job{background:var(--card2);border:1px solid var(--line);border-radius:19px;padding:16px 18px}
+.tl .when{color:var(--cyan);font-size:12.5px;font-weight:700;letter-spacing:1.4px}
+.tl .what{font-weight:600;font-size:16.5px;margin:3px 0;font-family:Poppins,sans-serif}
 .tl p{color:var(--mut);font-size:14.5px}
-.qrbox{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
-.qrbox img{width:210px;margin:0 auto 12px;border-radius:16px}
-footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-align:center;color:var(--mut);font-size:13.5px}
-.visits{margin-top:14px;text-align:center;color:var(--mut);font-size:13.5px}
-.visits img{display:inline-block;vertical-align:middle;height:22px;margin-left:6px;border-radius:5px}
+.qrbox{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.qrbox img{width:210px;margin:0 auto 12px;border-radius:17px}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-align:center;color:var(--mut);font-size:13.5px}
 /* review form */
-.fld{margin-bottom:12px}
+.fld{margin-bottom:13px}
 .fld label{display:block;font-size:14px;color:var(--mut);margin-bottom:6px;font-weight:600}
-.fld input,.fld select,.fld textarea{width:100%;background:#0b1526;border:1px solid var(--line);border-radius:14px;
-  color:var(--txt);padding:14px;font-size:16px;min-height:52px;font-family:inherit}
+.fld input,.fld select,.fld textarea{width:100%;background:rgba(5,10,20,.55);border:1px solid var(--line);border-radius:14px;color:var(--txt);padding:14px;font-size:16px;min-height:52px;font-family:inherit}
 .fld textarea{min-height:96px;resize:vertical}
 .stars{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px}
 .stars input{display:none}
-.stars label{font-size:36px;color:#3a4a66;cursor:pointer;line-height:1;padding:2px}
+.stars label{font-size:37px;color:#3a4a66;cursor:pointer;line-height:1;padding:2px}
 .stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--gold)}
-.empty{background:var(--card2);border:1px dashed rgba(120,180,255,.35);border-radius:18px;padding:18px;text-align:center;color:var(--mut);font-size:15px}
-@media (min-width:560px){
-  .cta{grid-template-columns:1fr 1fr}
-  .stats{gap:12px}
-  h1{font-size:36px}
-}
+.empty{background:var(--card2);border:1px dashed rgba(120,180,255,.35);border-radius:19px;padding:19px;text-align:center;color:var(--mut);font-size:15px}
+@media (min-width:560px){.cta{grid-template-columns:1fr 1fr}.stats{gap:12px}h1{font-size:37px}}
 </style>
 </head>
 <body>
 <header>
   <div class="hbar">
-    <div class="logo">Ai <span>Global Technology</span></div>
+    <div class="logo"><span class="dot">Ai</span><span>Ai <em>Global Technology</em></span></div>
     <a class="bookbtn" href="https://t.me/AGTREMOTECRAFT202">Book a Service</a>
   </div>
 </header>
@@ -132,7 +151,8 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
   <!-- HERO -->
   <div class="hero">
     <div class="hero-photo"><img src="hero.jpg" alt="Mr Kyaw Thet Paing at his creator desk"></div>
-    <h1>Mr Kyaw Thet Paing</h1>
+    <span class="kicker"><i></i>AVAILABLE FOR PROJECTS</span>
+    <h1>Mr <span class="grad">Kyaw Thet Paing</span></h1>
     <div class="mm">ကျော်သက်ပိုင်</div>
     <div class="role">AI Content Creator · Video Editor · Mobile Software Technician</div>
     <div class="tag">"Create with technology. Explain with clarity. Edit with purpose."</div>
@@ -143,80 +163,63 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
       <div class="stat"><b>2,700+</b><i>TELEGRAM SUBS</i></div>
     </div>
     <div class="cta">
-      <a class="btn primary" href="https://t.me/AGTREMOTECRAFT202">📩 Book a Service</a>
-      <a class="btn ghost" href="https://youtube.com/@technologyvideoscreatorktp2003">▶ Watch My Work</a>
+      <a class="btn primary" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Book a Service</a>
+      <a class="btn ghost" href="https://youtube.com/@technologyvideoscreatorktp2003"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.2v7.6L16.5 12 10 8.2Z" fill="currentColor" stroke="none"/></svg> Watch My Work</a>
     </div>
-    <div class="visits">👁 Website Visitors<img src="https://hits.sh/kyawthetpaing2003.github.io.svg?style=flat-square" alt="Visitor counter"></div>
+    <div class="visits"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.2 12 5.2 21.5 12 21.5 12 18 18.8 12 18.8 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.1"/></svg> Website Visitors <img src="https://hits.sh/kyawthetpaing2003.github.io.svg?style=flat-square" alt="Visitor counter"></div>
   </div>
 
   <!-- MAIN SERVICES -->
   <section id="services">
+    <div class="eyebrow">WHAT I DO</div>
     <h2>Main <span class="accent">Services</span></h2>
     <div class="sub">My two core services — professional results, made with a mobile-first workflow.</div>
 
     <div class="card">
       <img class="ph" src="studio.jpg" alt="AI video creation studio setup">
       <div class="bd">
-        <span class="badge">★ MAIN SERVICE</span>
-        <h3>AI Video Creation</h3>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></svg> MAIN SERVICE</span>
+        <div class="svc-head"><span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="15" height="14" rx="3"/><path d="M17.5 10.2 21.5 7.6v8.8l-4-2.6"/></svg></span><h3>AI Video Creation</h3></div>
         <div class="price">From 50,000 Ks / minute</div>
         <p>Scroll-stopping AI videos for your brand or product — actor-style presenters, product promos and story ads, produced end-to-end.</p>
         <ul class="ticks">
-          <li>AI presenter &amp; product promo videos</li>
-          <li>Script + natural Burmese voiceover included options</li>
-          <li>Story-style ads that people actually watch</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>AI presenter &amp; product promo videos</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Script + natural Burmese voiceover included options</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Story-style ads that people actually watch</li>
         </ul>
-        <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202">Order on Telegram</a>
+        <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order on Telegram</a>
       </div>
     </div>
 
     <div class="card">
       <img class="ph" src="edit.jpg" alt="Video editing timeline on screen">
       <div class="bd">
-        <span class="badge">★ MAIN SERVICE</span>
-        <h3>AI Video Editing</h3>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></svg> MAIN SERVICE</span>
+        <div class="svc-head"><span class="ic-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span><h3>AI Video Editing</h3></div>
         <div class="price">From 35,000 Ks / minute</div>
         <p>Clean, retention-focused editing for long-form videos, Reels and TikTok — hooks, pacing, subtitles and sound that keep viewers watching.</p>
         <ul class="ticks">
-          <li>Long-form, Reels &amp; TikTok editing</li>
-          <li>Hook &amp; retention editing, text animation, SFX</li>
-          <li>Myanmar / English subtitle check &amp; correction</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Long-form, Reels &amp; TikTok editing</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Hook &amp; retention editing, text animation, SFX</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Myanmar / English subtitle check &amp; correction</li>
         </ul>
-        <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202">Order on Telegram</a>
+        <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order on Telegram</a>
       </div>
     </div>
 
     <div class="mini">
-      <div class="row">
-        <h4>🔐 Facebook Account Recovery</h4>
-        <p>Hacked or locked Facebook account? Step-by-step recovery help to get your account back — safely and correctly.</p>
-      </div>
-      <div class="row">
-        <h4>📱 Social Media Account Service</h4>
-        <p>New account creation &amp; proper setup — Facebook, TikTok, YouTube, Instagram and Telegram, done right from the start.</p>
-      </div>
-      <div class="row">
-        <h4>💰 Monetization Service</h4>
-        <p>Facebook &amp; YouTube monetization setup — eligibility check, payout setup guidance and policy-safe advice.</p>
-      </div>
-      <div class="row">
-        <h4>🎨 Graphic Design</h4>
-        <p>Posters, thumbnails, channel art and logos in the Ai Global Technology style.</p>
-      </div>
-      <div class="row">
-        <h4>🤖 AI Prompt Services</h4>
-        <p>Image &amp; video prompts, scripts and content ideas for creators.</p>
-      </div>
-      <div class="row">
-        <h4>📦 Monthly Content Packages</h4>
-        <p>Regular content for your page or brand, every month.</p>
-        <div class="p2">Starter 300,000 Ks · Creator 600,000 Ks · Business 1,000,000 Ks / month</div>
-      </div>
+      <div class="row"><span class="ic-tile t-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8v5.4c0 4.3 2.9 7.4 7 9.3 4.1-1.9 7-5 7-9.3V5.8L12 3Z"/><path d="m9 11.6 2.1 2.1 3.9-4.2"/></svg></span><div><h4>Facebook Account Recovery</h4><p>Hacked or locked Facebook account? Step-by-step recovery help to get your account back — safely and correctly.</p></div></div>
+      <div class="row"><span class="ic-tile t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="8" r="3.6"/><path d="M4 20.2c.8-3.2 3.4-4.8 6.5-4.8s5.7 1.6 6.5 4.8"/><path d="M18.5 5v6M15.5 8h6"/></svg></span><div><h4>Social Media Account Service</h4><p>New account creation &amp; proper setup — Facebook, TikTok, YouTube, Instagram and Telegram, done right from the start.</p></div></div>
+      <div class="row"><span class="ic-tile t-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="m8 15.5 3.6-4 2.8 2.4 4.1-4.9"/><path d="M15.8 8.8h2.9v2.9"/></svg></span><div><h4>Monetization Service</h4><p>Facebook &amp; YouTube monetization setup — eligibility check, payout setup guidance and policy-safe advice.</p></div></div>
+      <div class="row"><span class="ic-tile t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9c0 2-1.5 3-3 3h-2.2a2.3 2.3 0 0 0-1.8 3.6c.3.4.5.8.5 1.2 0 .7-.5 1.2-2.5 1.2Z"/><circle cx="7.5" cy="10.5" r="1.1" fill="currentColor"/><circle cx="12" cy="7.2" r="1.1" fill="currentColor"/><circle cx="16.8" cy="10.3" r="1.1" fill="currentColor"/></svg></span><div><h4>Graphic Design</h4><p>Posters, thumbnails, channel art and logos in the Ai Global Technology style.</p></div></div>
+      <div class="row"><span class="ic-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.9 9 19.5 10.9 13.9 12.8 12 18.3 10.1 12.8 4.5 10.9 10.1 9 12 3.5Z"/><path d="M19 16.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg></span><div><h4>AI Prompt Services</h4><p>Image &amp; video prompts, scripts and content ideas for creators.</p></div></div>
+      <div class="row"><span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z"/><path d="M4 7l8 4 8-4"/><path d="M12 11v10"/><path d="m8 5 8 4"/></svg></span><div><h4>Monthly Content Packages</h4><p>Regular content for your page or brand, every month.</p><div class="p2">Starter 300,000 Ks · Creator 600,000 Ks · Business 1,000,000 Ks / month</div></div></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
+    <div class="eyebrow">ABOUT</div>
     <h2>About <span class="accent">Me</span></h2>
     <div class="sub">Freelance creator based in Bangkok — everything filmed and edited from my phone.</div>
     <div class="about-photo"><img src="about.jpg" alt="Kyaw Thet Paing in his studio"></div>
@@ -225,7 +228,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
     <div class="duo">
       <img src="robot.jpg" alt="AGT Robot — official brand mascot">
       <div>
-        <b>The AGT Robot</b>
+        <b style="font-family:Poppins,sans-serif">The AGT Robot</b>
         <p>My official brand mascot — it appears across my channel posters, videos and community, helping me explain tech in a friendly way.</p>
       </div>
     </div>
@@ -233,6 +236,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
 
   <!-- SKILLS -->
   <section id="skills">
+    <div class="eyebrow">EXPERTISE</div>
     <h2>My <span class="accent">Skills</span></h2>
     <div class="sub">Tools and crafts behind every video.</div>
     <div class="chips">
@@ -245,6 +249,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
 
   <!-- CHANNELS -->
   <section id="channels">
+    <div class="eyebrow">FOLLOW ME</div>
     <h2>My <span class="accent">Channels</span></h2>
     <div class="sub">Follow Ai Global Technology everywhere.</div>
     <div class="chan">
@@ -258,6 +263,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
 
   <!-- EXPERIENCE -->
   <section id="experience">
+    <div class="eyebrow">JOURNEY</div>
     <h2>Experience</h2>
     <div class="sub">From phone repair bench to full-time creator.</div>
     <div class="tl">
@@ -269,6 +275,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
 
   <!-- REVIEWS -->
   <section id="reviews">
+    <div class="eyebrow">TESTIMONIALS</div>
     <h2>Ratings &amp; <span class="accent">Reviews</span></h2>
     <div class="sub">Used one of my services? Leave a rating — it helps me a lot. Reviews are checked before they appear here.</div>
     <div class="card"><div class="bd">
@@ -293,7 +300,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
           </select>
         </div>
         <div class="fld"><label>Your review</label><textarea name="Review" required placeholder="How was the service?"></textarea></div>
-        <button class="btn gold" type="submit" style="width:100%;border:none;cursor:pointer">⭐ Submit Review</button>
+        <button class="btn gold" type="submit" style="width:100%;border:none;cursor:pointer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></svg> Submit Review</button>
         <p style="color:var(--mut);font-size:13px;text-align:center;margin-top:10px">Submitting opens your email app with the review ready to send.</p>
       </form>
     </div></div>
@@ -304,12 +311,13 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
 
   <!-- BOOK -->
   <section id="book">
+    <div class="eyebrow">GET STARTED</div>
     <h2>Book a <span class="accent">Service</span></h2>
     <div class="sub">Scan the QR or message me on Telegram — I reply personally.</div>
     <div class="qrbox">
       <img src="qr.jpg" alt="Telegram QR — @AGTREMOTECRAFT202">
       <p style="color:var(--mut);font-size:14.5px;margin-bottom:14px">Telegram: @AGTREMOTECRAFT202<br>Email: kophyoe.id2025@gmail.com</p>
-      <a class="btn primary" href="https://t.me/AGTREMOTECRAFT202">📩 Message on Telegram</a>
+      <a class="btn primary" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Message on Telegram</a>
     </div>
   </section>
 
