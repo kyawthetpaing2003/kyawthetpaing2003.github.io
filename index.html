@@ -272,11 +272,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
     <h2>Ratings &amp; <span class="accent">Reviews</span></h2>
     <div class="sub">Used one of my services? Leave a rating — it helps me a lot. Reviews are checked before they appear here.</div>
     <div class="card"><div class="bd">
-      <form action="https://formsubmit.co/kophyoe.id2025@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="⭐ New review from the portfolio website">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://kyawthetpaing2003.github.io/">
+      <form id="reviewForm">
         <div class="fld">
           <label>Your rating</label>
           <div class="stars">
@@ -298,6 +294,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
         </div>
         <div class="fld"><label>Your review</label><textarea name="Review" required placeholder="How was the service?"></textarea></div>
         <button class="btn gold" type="submit" style="width:100%;border:none;cursor:pointer">⭐ Submit Review</button>
+        <p style="color:var(--mut);font-size:13px;text-align:center;margin-top:10px">Submitting opens your email app with the review ready to send.</p>
       </form>
     </div></div>
     <div class="empty">No reviews yet — be the first to share your experience 🙏<br><br>
@@ -318,5 +315,13 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
 
   <footer>© 2026 Ai Global Technology · Mr Kyaw Thet Paing<br>Bangkok, Thailand</footer>
 </div>
+<script>
+document.getElementById('reviewForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = new FormData(this);
+  var body = 'Rating: ' + (f.get('Rating') || '') + '\nName: ' + (f.get('Name') || '') + '\nService: ' + (f.get('Service') || '') + '\n\nReview:\n' + (f.get('Review') || '');
+  window.location.href = 'mailto:kophyoe.id2025@gmail.com?subject=' + encodeURIComponent('⭐ New review from the portfolio website') + '&body=' + encodeURIComponent(body);
+});
+</script>
 </body>
 </html>
