@@ -99,6 +99,19 @@ ul.ticks li:before{content:"✓";position:absolute;left:0;top:0;color:var(--cyan
 .qrbox{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
 .qrbox img{width:210px;margin:0 auto 12px;border-radius:16px}
 footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-align:center;color:var(--mut);font-size:13.5px}
+.visits{margin-top:14px;text-align:center;color:var(--mut);font-size:13.5px}
+.visits img{display:inline-block;vertical-align:middle;height:22px;margin-left:6px;border-radius:5px}
+/* review form */
+.fld{margin-bottom:12px}
+.fld label{display:block;font-size:14px;color:var(--mut);margin-bottom:6px;font-weight:600}
+.fld input,.fld select,.fld textarea{width:100%;background:#0b1526;border:1px solid var(--line);border-radius:14px;
+  color:var(--txt);padding:14px;font-size:16px;min-height:52px;font-family:inherit}
+.fld textarea{min-height:96px;resize:vertical}
+.stars{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px}
+.stars input{display:none}
+.stars label{font-size:36px;color:#3a4a66;cursor:pointer;line-height:1;padding:2px}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--gold)}
+.empty{background:var(--card2);border:1px dashed rgba(120,180,255,.35);border-radius:18px;padding:18px;text-align:center;color:var(--mut);font-size:15px}
 @media (min-width:560px){
   .cta{grid-template-columns:1fr 1fr}
   .stats{gap:12px}
@@ -133,6 +146,7 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
       <a class="btn primary" href="https://t.me/AGTREMOTECRAFT202">📩 Book a Service</a>
       <a class="btn ghost" href="https://youtube.com/@technologyvideoscreatorktp2003">▶ Watch My Work</a>
     </div>
+    <div class="visits">👁 Website Visitors<img src="https://hits.sh/kyawthetpaing2003.github.io.svg?style=flat-square" alt="Visitor counter"></div>
   </div>
 
   <!-- MAIN SERVICES -->
@@ -250,6 +264,44 @@ footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;text-al
       <div class="job"><div class="when">2023</div><div class="what">Software &amp; Hardware Technician — Anycall Mobile, Yangon</div><p>Mobile software and hardware service; the foundation of my tech knowledge.</p></div>
       <div class="job"><div class="when">2023 — PRESENT</div><div class="what">Freelance AI Content Creator &amp; Video Editor</div><p>Ai Global Technology — 100+ posts and videos across Facebook, TikTok, YouTube and Telegram; client video services and brand collaborations.</p></div>
       <div class="job"><div class="when">2026</div><div class="what">Bangkok, Thailand</div><p>Creating content full-time from my mobile phone for a growing Myanmar audience.</p></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2>Ratings &amp; <span class="accent">Reviews</span></h2>
+    <div class="sub">Used one of my services? Leave a rating — it helps me a lot. Reviews are checked before they appear here.</div>
+    <div class="card"><div class="bd">
+      <form action="https://formsubmit.co/kophyoe.id2025@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="⭐ New review from the portfolio website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://kyawthetpaing2003.github.io/">
+        <div class="fld">
+          <label>Your rating</label>
+          <div class="stars">
+            <input type="radio" id="s5" name="Rating" value="5 stars" required><label for="s5">★</label>
+            <input type="radio" id="s4" name="Rating" value="4 stars"><label for="s4">★</label>
+            <input type="radio" id="s3" name="Rating" value="3 stars"><label for="s3">★</label>
+            <input type="radio" id="s2" name="Rating" value="2 stars"><label for="s2">★</label>
+            <input type="radio" id="s1" name="Rating" value="1 star"><label for="s1">★</label>
+          </div>
+        </div>
+        <div class="fld"><label>Your name</label><input type="text" name="Name" required placeholder="e.g. Aung Aung"></div>
+        <div class="fld"><label>Service you used</label>
+          <select name="Service">
+            <option>AI Video Creation</option><option>AI Video Editing</option><option>Graphic Design</option>
+            <option>AI Prompt Services</option><option>Monthly Content Package</option>
+            <option>Facebook Account Recovery</option><option>Social Media Account Service</option>
+            <option>Monetization Service</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fld"><label>Your review</label><textarea name="Review" required placeholder="How was the service?"></textarea></div>
+        <button class="btn gold" type="submit" style="width:100%;border:none;cursor:pointer">⭐ Submit Review</button>
+      </form>
+    </div></div>
+    <div class="empty">No reviews yet — be the first to share your experience 🙏<br><br>
+      <a class="btn ghost" href="https://t.me/+_IZ2JCjsZyw0Y2I9" style="min-height:50px">💬 Or review in our Telegram Community</a>
     </div>
   </section>
 
