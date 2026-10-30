@@ -174,6 +174,14 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+/* free AI image tool */
+.xchips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.xchip{background:rgba(56,225,255,.07);border:1px solid rgba(56,225,255,.28);color:#cfeeff;font-size:13.5px;padding:9px 14px;border-radius:999px;font-weight:500;cursor:pointer;font-family:inherit;min-height:42px}
+.xchip.on{background:var(--grad);color:#03222e;border-color:transparent;font-weight:700}
+.ai-out{margin-top:16px;display:none}
+.ai-out img{width:100%;border-radius:18px;border:1px solid var(--line)}
+.ai-note{color:var(--mut);font-size:13px;margin-top:11px}
+#aiGen:disabled{opacity:.55;cursor:wait}
 /* work gallery */
 .work-grid{display:grid;gap:12px}
 @media (min-width:560px){.work-grid{grid-template-columns:1fr 1fr 1fr}}
@@ -217,6 +225,62 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
     </div>
     <div class="visits"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.2 12 5.2 21.5 12 21.5 12 18 18.8 12 18.8 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.1"/></svg> Website Visitors <img src="https://hits.sh/kyawthetpaing2003.github.io.svg?style=flat-square" alt="Visitor counter"></div>
   </div>
+
+  <!-- FREE AI IMAGE TOOL -->
+  <section id="freetool">
+    <div class="eyebrow">FREE TOOL</div>
+    <h2>Free AI <span class="accent">Image Generator</span></h2>
+    <div class="sub">စာရိုက်ရုံနဲ့ AI ပုံ အခမဲ့ ထုတ်ကြည့်ပါ — ကြိုက်ရင် အောက်က services မှာ watermark မပါတဲ့ pro quality နဲ့ ဆက်အပ်လို့ ရပါတယ်။</div>
+    <div class="card"><div class="bd">
+      <div class="svc-head"><span class="ic-tile t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9c0 2-1.5 3-3 3h-2.2a2.3 2.3 0 0 0-1.8 3.6c.3.4.5.8.5 1.2 0 .7-.5 1.2-2.5 1.2Z"/><circle cx="7.5" cy="10.5" r="1.1" fill="currentColor"/><circle cx="12" cy="7.2" r="1.1" fill="currentColor"/><circle cx="16.8" cy="10.3" r="1.1" fill="currentColor"/></svg></span><h3>AI Image Generator</h3></div>
+      <span class="badge" style="background:var(--grad);color:#03222e">FREE · အခမဲ့ စမ်းသုံးရန်</span>
+      <div class="fld">
+        <label for="aiPrompt">လိုချင်တဲ့ ပုံကို ရေးပါ (English နဲ့ ရေးရင် ပိုမှန်ပါတယ်)</label>
+        <textarea id="aiPrompt" placeholder="e.g. a cute robot drinking coffee in a Yangon tea shop, morning light"></textarea>
+      </div>
+      <div style="font-size:13.5px;color:var(--mut);font-weight:600">နမူနာ နှိပ်သုံးရန်:</div>
+      <div class="xchips" id="aiExamples">
+        <button type="button" class="xchip" data-prompt="a cute white chibi robot mascot waving hello, 3d render, soft studio light, colorful gradient background">🤖 စက်ရုပ် သူငယ်ချင်း</button>
+        <button type="button" class="xchip" data-prompt="a beautiful Myanmar countryside landscape at golden sunset, a river, a golden pagoda on a hill, photorealistic">🏞️ ရွှေရောင် ရှုခင်း</button>
+        <button type="button" class="xchip" data-prompt="a delicious bowl of mohinga noodle soup with steam rising, professional food photography, dark background">🍜 မုန့်ဟင်းခါး ကြော်ငြာ</button>
+        <button type="button" class="xchip" data-prompt="a cute kitten wearing tiny sunglasses, studio photo, pastel pink background">🐱 ကြောင်လေး</button>
+        <button type="button" class="xchip" data-prompt="a smiling young video creator filming with a smartphone on a tripod, neon lights, home studio">🎬 Creator အလုပ်</button>
+      </div>
+      <div style="font-size:13.5px;color:var(--mut);font-weight:600;margin-top:8px">Style ရွေးရန်:</div>
+      <div class="xchips" id="aiStyles">
+        <button type="button" class="xchip on" data-style="photorealistic, ultra detailed, natural light">📷 Photo</button>
+        <button type="button" class="xchip" data-style="anime style, vibrant colors, clean line art">🎌 Anime</button>
+        <button type="button" class="xchip" data-style="3d pixar style render, octane render, soft lighting">🧊 3D</button>
+        <button type="button" class="xchip" data-style="movie poster style, dramatic composition, bold colors, cinematic">🖼 Poster</button>
+      </div>
+      <div style="font-size:13.5px;color:var(--mut);font-weight:600;margin-top:8px">အရွယ်အစား:</div>
+      <div class="xchips" id="aiSizes">
+        <button type="button" class="xchip on" data-w="1024" data-h="1024">⬜ Square 1:1</button>
+        <button type="button" class="xchip" data-w="768" data-h="1024">📱 Portrait 3:4</button>
+        <button type="button" class="xchip" data-w="1024" data-h="768">🖥 Wide 4:3</button>
+      </div>
+      <button type="button" class="btn primary" id="aiGen" style="width:100%;margin-top:14px;border:none;cursor:pointer;font-family:inherit">🎨 Generate Image — ပုံ ထုတ်မယ်</button>
+      <div class="ai-note" id="aiStatus">Free service (Pollinations) မို့ ပုံ ညာဘက် အောက်ခြေမှာ watermark သေးသေးလေး ပါပါတယ် — လူများချိန်မှာ ခဏ စောင့်ရနိုင်ပါတယ်။</div>
+      <div class="ai-out" id="aiOut">
+        <img id="aiImg" alt="Your AI generated image">
+        <div style="display:grid;gap:10px;margin-top:12px">
+          <button type="button" class="btn gold" id="aiDl" style="border:none;cursor:pointer;font-family:inherit">⬇ Download — ပုံ သိမ်းမယ်</button>
+          <a class="btn ghost" id="aiFull" href="#" target="_blank" rel="noopener">Open Full Size</a>
+        </div>
+      </div>
+    </div></div>
+    <div class="duo" style="align-items:center">
+      <img src="robot.jpg" alt="AGT Robot">
+      <div>
+        <b style="font-family:Poppins,sans-serif">Want it pro — or as a video?</b>
+        <p>Watermark မပါ၊ quality အမြင့်ဆုံး ပုံတွေ၊ ဒါမှမဟုတ် ဒီပုံကို AI Video ပြောင်းချင်ရင် ကျွန်တော့် services မှာ အပ်လို့ ရပါတယ် — ဈေးနှုန်းတွေ အောက်မှာ ရှိပါတယ်။</p>
+        <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:11px">
+          <a class="btn ghost" href="#services" style="min-height:48px;font-size:14.5px;padding:10px 16px">See Services &amp; Prices</a>
+          <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202" style="min-height:48px;font-size:14.5px;padding:10px 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order on Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- MAIN SERVICES -->
   <section id="services">
@@ -427,6 +491,68 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
     entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, { threshold: 0.08 });
   els.forEach(function(el){ io.observe(el); });
+})();
+
+// Free AI image generator — powered by the free Pollinations service
+(function(){
+  var genBtn = document.getElementById('aiGen');
+  if (!genBtn) return;
+  var ta = document.getElementById('aiPrompt'),
+      status = document.getElementById('aiStatus'),
+      out = document.getElementById('aiOut'),
+      img = document.getElementById('aiImg'),
+      dl = document.getElementById('aiDl'),
+      full = document.getElementById('aiFull'),
+      genLabel = genBtn.innerHTML,
+      styleTxt = 'photorealistic, ultra detailed, natural light',
+      W = 1024, H = 1024, cooling = false;
+  function wireChips(id, fn){
+    var box = document.getElementById(id); if (!box) return;
+    var chips = box.querySelectorAll('.xchip');
+    chips.forEach(function(c){ c.addEventListener('click', function(){ fn(c, chips); }); });
+  }
+  wireChips('aiStyles', function(c, chips){ chips.forEach(function(x){ x.classList.remove('on'); }); c.classList.add('on'); styleTxt = c.getAttribute('data-style') || ''; });
+  wireChips('aiSizes', function(c, chips){ chips.forEach(function(x){ x.classList.remove('on'); }); c.classList.add('on'); W = +c.getAttribute('data-w'); H = +c.getAttribute('data-h'); });
+  wireChips('aiExamples', function(c){ ta.value = c.getAttribute('data-prompt') || ''; ta.focus(); });
+  function startCooldown(sec){
+    cooling = true; genBtn.disabled = true;
+    var left = sec;
+    genBtn.textContent = '⏳ ' + left + 's';
+    var iv = setInterval(function(){
+      left--;
+      if (left <= 0){ clearInterval(iv); cooling = false; genBtn.disabled = false; genBtn.innerHTML = genLabel; }
+      else { genBtn.textContent = '⏳ ' + left + 's'; }
+    }, 1000);
+  }
+  genBtn.addEventListener('click', function(){
+    if (cooling) return;
+    var p = (ta.value || '').trim();
+    if (!p){ status.textContent = 'အရင်ဆုံး ပုံ အကြောင်း စာလေး ရေးပါ — ဒါမှမဟုတ် နမူနာ ခလုတ် တစ်ခု နှိပ်ပါ 👆'; ta.focus(); return; }
+    genBtn.disabled = true; genBtn.textContent = '⏳ Generating…';
+    status.textContent = 'ပုံ ထုတ်နေပါတယ် — ၁၀ စက္ကန့်ကနေ ၃၀ စက္ကန့် အထိ ကြာနိုင်ပါတယ်…';
+    out.style.display = 'none';
+    var seed = Math.floor(Math.random() * 1000000);
+    var url = 'https://image.pollinations.ai/prompt/' + encodeURIComponent(p + (styleTxt ? ', ' + styleTxt : '')) + '?width=' + W + '&height=' + H + '&seed=' + seed + '&nologo=true&model=flux';
+    var pre = new Image();
+    pre.onload = function(){
+      img.src = url; full.href = url; out.style.display = 'block';
+      status.textContent = 'ရပါပြီ ✅ Free service မို့ နောက် တစ်ပုံ အတွက် ၄၅ စက္ကန့် စောင့်ရပါတယ်။';
+      startCooldown(45);
+    };
+    pre.onerror = function(){
+      status.textContent = '😥 Service busy ဖြစ်နေပါတယ် — ၁ မိနစ် လောက် စောင့်ပြီး ပြန် နှိပ်ကြည့်ပါ။';
+      genBtn.disabled = false; genBtn.innerHTML = genLabel;
+    };
+    pre.src = url;
+  });
+  dl.addEventListener('click', function(){
+    if (!img.src) return;
+    fetch(img.src).then(function(r){ return r.blob(); }).then(function(b){
+      var u = URL.createObjectURL(b), a = document.createElement('a');
+      a.href = u; a.download = 'agt-ai-image.jpg'; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(u); }, 4000);
+    }).catch(function(){ window.open(img.src, '_blank'); });
+  });
 })();
 
 </script>
