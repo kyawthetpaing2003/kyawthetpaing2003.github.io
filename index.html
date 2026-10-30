@@ -238,6 +238,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <label for="aiPrompt">လိုချင်တဲ့ ပုံကို ရေးပါ (English နဲ့ ရေးရင် ပိုမှန်ပါတယ်)</label>
         <textarea id="aiPrompt" placeholder="e.g. a cute robot drinking coffee in a Yangon tea shop, morning light"></textarea>
       </div>
+      <div class="ai-note" style="margin:-4px 0 8px">💡 ပုံထဲမှာ စာ မထည့်ပါနဲ့ — AI က မြန်မာစာကို မှားရေးတတ်ပါတယ်။ စာပါတဲ့ Thumbnail / Poster လိုချင်ရင် အောက်မှာ Telegram လမ်းညွှန် ရှိပါတယ်။</div>
       <div style="font-size:13.5px;color:var(--mut);font-weight:600">နမူနာ နှိပ်သုံးရန်:</div>
       <div class="xchips" id="aiExamples">
         <button type="button" class="xchip" data-prompt="a cute white chibi robot mascot waving hello, 3d render, soft studio light, colorful gradient background">🤖 စက်ရုပ် သူငယ်ချင်း</button>
@@ -245,6 +246,8 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <button type="button" class="xchip" data-prompt="a delicious bowl of mohinga noodle soup with steam rising, professional food photography, dark background">🍜 မုန့်ဟင်းခါး ကြော်ငြာ</button>
         <button type="button" class="xchip" data-prompt="a cute kitten wearing tiny sunglasses, studio photo, pastel pink background">🐱 ကြောင်လေး</button>
         <button type="button" class="xchip" data-prompt="a smiling young video creator filming with a smartphone on a tripod, neon lights, home studio">🎬 Creator အလုပ်</button>
+        <button type="button" class="xchip" data-prompt="an excited young man pointing at a glowing smartphone, bold colorful background, youtube thumbnail style, dramatic expression">🎯 Thumbnail ပုံစံ</button>
+        <button type="button" class="xchip" data-prompt="a modern smartphone floating in the air with glowing holographic app icons around it, product advertisement, studio lighting">📱 ဖုန်း ကြော်ငြာ</button>
       </div>
       <div style="font-size:13.5px;color:var(--mut);font-weight:600;margin-top:8px">Style ရွေးရန်:</div>
       <div class="xchips" id="aiStyles">
@@ -252,12 +255,19 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <button type="button" class="xchip" data-style="anime style, vibrant colors, clean line art">🎌 Anime</button>
         <button type="button" class="xchip" data-style="3d pixar style render, octane render, soft lighting">🧊 3D</button>
         <button type="button" class="xchip" data-style="movie poster style, dramatic composition, bold colors, cinematic">🖼 Poster</button>
+        <button type="button" class="xchip" data-style="cinematic film still, dramatic lighting, shallow depth of field">🎬 Cinematic</button>
+        <button type="button" class="xchip" data-style="watercolor painting style, soft brush strokes, artistic">🎨 Watercolor</button>
+        <button type="button" class="xchip" data-style="cyberpunk style, neon lights, futuristic city mood">🌆 Cyberpunk</button>
+        <button type="button" class="xchip" data-style="professional product advertising photo, studio lighting, clean background">🛍️ Product Ad</button>
+        <button type="button" class="xchip" data-style="minimal logo design, flat vector style, clean, centered on a plain background">✨ Logo</button>
       </div>
       <div style="font-size:13.5px;color:var(--mut);font-weight:600;margin-top:8px">အရွယ်အစား:</div>
       <div class="xchips" id="aiSizes">
         <button type="button" class="xchip on" data-w="1024" data-h="1024">⬜ Square 1:1</button>
         <button type="button" class="xchip" data-w="768" data-h="1024">📱 Portrait 3:4</button>
         <button type="button" class="xchip" data-w="1024" data-h="768">🖥 Wide 4:3</button>
+        <button type="button" class="xchip" data-w="832" data-h="1040">🖼 Poster 4:5</button>
+        <button type="button" class="xchip" data-w="720" data-h="1280">📲 Story 9:16</button>
       </div>
       <button type="button" class="btn primary" id="aiGen" style="width:100%;margin-top:14px;border:none;cursor:pointer;font-family:inherit">🎨 Generate Image — ပုံ ထုတ်မယ်</button>
       <div class="ai-note" id="aiStatus">Free service (Pollinations) မို့ ပုံ ညာဘက် အောက်ခြေမှာ watermark သေးသေးလေး ပါပါတယ် — လူများချိန်မှာ ခဏ စောင့်ရနိုင်ပါတယ်။</div>
@@ -272,11 +282,11 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
     <div class="duo" style="align-items:center">
       <img src="robot.jpg" alt="AGT Robot">
       <div>
-        <b style="font-family:Poppins,sans-serif">Want it pro — or as a video?</b>
-        <p>Watermark မပါ၊ quality အမြင့်ဆုံး ပုံတွေ၊ ဒါမှမဟုတ် ဒီပုံကို AI Video ပြောင်းချင်ရင် ကျွန်တော့် services မှာ အပ်လို့ ရပါတယ် — ဈေးနှုန်းတွေ အောက်မှာ ရှိပါတယ်။</p>
+        <b style="font-family:Poppins,sans-serif">Your face, your text — done properly?</b>
+        <p>မင်းရဲ့ မျက်နှာ မပြောင်းဘဲ reference ပုံနဲ့ ထုတ်ချင်လား? မြန်မာစာ အမှန်ပါတဲ့ Thumbnail / Poster လိုချင်လား? အဲဒါတွေ ဒီ free tool နဲ့ မရပါဘူး — Telegram Community ရဲ့ 🎨 topic မှာ အခမဲ့ လာထုတ်လို့ ရပါတယ်၊ client အလုပ် အနေနဲ့လည်း အပ်လို့ ရပါတယ်။</p>
         <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:11px">
+          <a class="btn gold" href="https://t.me/+_IZ2JCjsZyw0Y2I9" style="min-height:48px;font-size:14.5px;padding:10px 16px">🎨 Community မှာ အခမဲ့ ထုတ်ရန်</a>
           <a class="btn ghost" href="#services" style="min-height:48px;font-size:14.5px;padding:10px 16px">See Services &amp; Prices</a>
-          <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202" style="min-height:48px;font-size:14.5px;padding:10px 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order on Telegram</a>
         </div>
       </div>
     </div>
