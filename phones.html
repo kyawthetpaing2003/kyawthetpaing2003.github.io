@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Specs — Ai Global Technology</title>
+<meta name="description" content="ဖုန်း အချက်အလက်များ — popular phones' verified specs: display, chipset, camera, battery and launch price. By Ai Global Technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b16;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.09);--txt:#eef2ff;--mut:#9aa7c7;--cyan:#38bdf8;--gold:#f5c451}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:Inter,"Noto Sans Myanmar",sans-serif;font-size:16px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 15% -5%,rgba(56,189,248,.16),transparent 60%),radial-gradient(700px 500px at 95% 10%,rgba(129,140,248,.14),transparent 60%),radial-gradient(500px 500px at 50% 110%,rgba(245,196,81,.07),transparent 60%)}
+.wrap{max-width:1060px;margin:0 auto;padding:20px 16px 56px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:22px}
+.back{color:var(--mut);text-decoration:none;font-weight:600;font-size:14.5px}
+.back:hover{color:var(--txt)}
+.brandmark{font-family:Poppins,sans-serif;font-weight:700;font-size:15px}
+.brandmark span{color:var(--cyan)}
+h1{font-family:Poppins,"Noto Sans Myanmar",sans-serif;font-size:30px;font-weight:800;line-height:1.25}
+h1 .accent{background:linear-gradient(90deg,var(--cyan),#818cf8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);margin-top:6px;font-size:15px}
+.sample{display:inline-block;margin-top:12px;background:rgba(245,196,81,.14);border:1px solid rgba(245,196,81,.4);color:var(--gold);font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(7,11,22,.88);backdrop-filter:blur(10px);padding:14px 0 10px;margin-top:18px}
+.search{width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;color:var(--txt);font:inherit;font-size:15.5px;padding:13px 15px;outline:none}
+.search:focus{border-color:var(--cyan)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--txt);font:inherit;font-size:14px;font-weight:600;border-radius:999px;padding:8px 15px;cursor:pointer;min-height:40px}
+.chip.on{background:linear-gradient(90deg,#0ea5e9,#6366f1);border-color:transparent;color:#fff}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;backdrop-filter:blur(6px)}
+.phead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:14px}
+.badge{font-size:11.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;border-radius:8px;padding:4px 9px;color:#0b1020}
+.b-apple{background:#e8ecf4}.b-samsung{background:#7db4ff}.b-xiaomi{background:#ffb066}.b-redmi{background:#6ee7c8}.b-infinix{background:#a7e06e}
+.pname{font-family:Poppins,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-top:9px}
+.price{color:var(--gold);font-weight:800;font-family:Poppins,sans-serif;font-size:17px;white-space:nowrap}
+.price small{display:block;color:var(--mut);font-weight:500;font-size:11px;text-align:right}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:11px 14px}
+.spec label{display:block;font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--mut);margin-bottom:2px}
+.spec div{font-size:14.5px;font-weight:600;line-height:1.45}
+.empty{color:var(--mut);text-align:center;padding:34px 0;display:none}
+.foot{margin-top:30px;color:var(--mut);font-size:13.5px;line-height:1.6}
+.cta{display:flex;justify-content:center;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#0ea5e9,#6366f1);color:#fff;text-decoration:none;font-weight:700;border-radius:14px;padding:14px 22px;min-height:52px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="back" href="index.html">← Portfolio</a>
+    <div class="brandmark">Ai <span>Global</span> Technology</div>
+  </div>
+
+  <h1>📱 Phone Specs — <span class="accent">ဖုန်း အချက်အလက်များ</span></h1>
+  <p class="sub">လူကြိုက်များတဲ့ ဖုန်းတွေရဲ့ စစ်ထားပြီးသား specs — Display, Chipset, Camera, Battery နဲ့ စတင်ရောင်းဈေး။ Brand ရွေးပြီးဖြစ်ဖြစ်၊ နာမည် ရိုက်ရှာပြီးဖြစ်ဖြစ် ကြည့်လို့ ရတယ်။</p>
+  <span class="sample">နမူနာ (Sample) — model ၅ လုံး ပဲ ပါသေးတယ်</span>
+
+  <div class="controls">
+    <input class="search" id="q" type="search" placeholder="🔍 ဖုန်း နာမည် ရှာရန် — ဥပမာ: iPhone, S25, Redmi…">
+    <div class="chips" id="brandChips">
+      <button class="chip on" data-brand="all">All</button>
+      <button class="chip" data-brand="Apple">Apple</button>
+      <button class="chip" data-brand="Samsung">Samsung</button>
+      <button class="chip" data-brand="Xiaomi">Xiaomi</button>
+      <button class="chip" data-brand="Redmi">Redmi</button>
+      <button class="chip" data-brand="Infinix">Infinix</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">ရှာတာ မတွေ့ဘူး — တခြား နာမည် စမ်းကြည့်ပါ 🙏</div>
+
+  <p class="foot">Specs တွေကို GSMArena နဲ့ တရားဝင် (official) sources တွေကနေ စစ်ထားတာ ဖြစ်ပါတယ်။ ဈေးနှုန်းတွေက စတင်ရောင်းဈေး (launch price, USD) — ဈေးကွက်နဲ့ အချိန် အလိုက် ကွာခြားနိုင်ပါတယ်။ ဖုန်း အကြောင်း အသေးစိတ် သိချင်ရင် Telegram channel မှာ နေ့စဉ် knowledge posts တင်ပေးနေပါတယ်။</p>
+  <div class="cta"><a class="btn" href="https://t.me/UCEXPRLFcGdB8NmrrTut6Wwg">✈️ Join Telegram Channel</a></div>
+</div>
+
+<script>
+const PHONES = [
+  {brand:"Apple", model:"iPhone 17 Pro Max", price:"$1,199",
+   display:"6.9\" LTPO OLED · 120Hz · 3000 nits", chip:"Apple A19 Pro (3 nm)",
+   ram:"12GB RAM · 256GB – 2TB", camera:"48 + 48 + 48 MP (4x tele)",
+   front:"18 MP Center Stage", battery:"4,832 mAh · 40W (50% ≈ 20 min)"},
+  {brand:"Samsung", model:"Galaxy S25 Ultra", price:"$1,299",
+   display:"6.9\" AMOLED 2X · 120Hz · QHD+", chip:"Snapdragon 8 Elite (3 nm)",
+   ram:"12GB RAM · 256GB – 1TB", camera:"200 + 50 + 50 + 10 MP (5x tele)",
+   front:"12 MP", battery:"5,000 mAh · 45W"},
+  {brand:"Xiaomi", model:"Xiaomi 15", price:"$999",
+   display:"6.36\" LTPO AMOLED · 120Hz · 3200 nits", chip:"Snapdragon 8 Elite (3 nm)",
+   ram:"12GB RAM · 256GB / 512GB", camera:"50 + 50 + 50 MP (Leica)",
+   front:"32 MP", battery:"5,240 mAh · 90W + 50W wireless"},
+  {brand:"Redmi", model:"Redmi Note 14 Pro 5G (Global)", price:"$369",
+   display:"6.67\" AMOLED · 120Hz · 1.5K", chip:"Dimensity 7300 Ultra (4 nm)",
+   ram:"8/12GB RAM · 128 – 512GB", camera:"200 + 8 + 2 MP (OIS)",
+   front:"20 MP", battery:"5,110 mAh · 45W"},
+  {brand:"Infinix", model:"Infinix Hot 60 Pro", price:"≈ $180",
+   display:"6.78\" AMOLED · 144Hz · 1.5K", chip:"MediaTek Helio G200 (6 nm)",
+   ram:"8GB RAM · 128GB / 256GB", camera:"50 MP",
+   front:"13 MP", battery:"5,160 mAh · 45W"}
+];
+const grid = document.getElementById('grid');
+const empty = document.getElementById('empty');
+let brand = 'all', query = '';
+function badgeClass(b){ return 'b-' + b.toLowerCase(); }
+function render(){
+  const list = PHONES.filter(p =>
+    (brand === 'all' || p.brand === brand) &&
+    (p.model + ' ' + p.brand + ' ' + p.chip).toLowerCase().includes(query));
+  grid.innerHTML = list.map(p => `
+    <article class="pcard">
+      <div class="phead">
+        <div>
+          <span class="badge ${badgeClass(p.brand)}">${p.brand}</span>
+          <div class="pname">${p.model}</div>
+        </div>
+        <div class="price">${p.price}<small>launch price</small></div>
+      </div>
+      <div class="specs">
+        <div class="spec"><label>Display</label><div>${p.display}</div></div>
+        <div class="spec"><label>Chipset</label><div>${p.chip}</div></div>
+        <div class="spec"><label>RAM · Storage</label><div>${p.ram}</div></div>
+        <div class="spec"><label>Camera</label><div>${p.camera}</div></div>
+        <div class="spec"><label>Front Camera</label><div>${p.front}</div></div>
+        <div class="spec"><label>Battery</label><div>${p.battery}</div></div>
+      </div>
+    </article>`).join('');
+  empty.style.display = list.length ? 'none' : 'block';
+}
+document.getElementById('brandChips').addEventListener('click', e => {
+  const btn = e.target.closest('.chip'); if(!btn) return;
+  document.querySelectorAll('#brandChips .chip').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on'); brand = btn.dataset.brand; render();
+});
+document.getElementById('q').addEventListener('input', e => {
+  query = e.target.value.trim().toLowerCase(); render();
+});
+render();
+</script>
+</body>
+</html>
