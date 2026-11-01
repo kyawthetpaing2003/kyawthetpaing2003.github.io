@@ -115,6 +115,15 @@ ul.ticks li .ck svg{width:12px;height:12px}
 .mini h4{font-size:16.5px;font-weight:600;font-family:Poppins,sans-serif;margin-bottom:2px}
 .mini p{color:var(--mut);font-size:14px}
 .mini .p2{color:var(--gold);font-weight:600;font-size:14px;margin-top:6px}
+.pr-grid{display:grid;gap:14px}
+.pr-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;backdrop-filter:blur(6px)}
+.pr-card h3{font-family:Poppins,sans-serif;font-size:18px;margin-bottom:4px}
+.pr-card .pr-sub{color:var(--mut);font-size:13.5px;margin-bottom:12px}
+.pr-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.09);font-size:14.5px}
+.pr-row:last-child{border-bottom:none}
+.pr-row .pl{color:#dce8f8}
+.pr-row .pl small{display:block;color:var(--mut);font-size:12.5px}
+.pr-row .pv{color:var(--gold);font-weight:700;white-space:nowrap}
 
 /* channels */
 .chan{display:grid;gap:10px}
@@ -315,6 +324,62 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
     </div>
   </section>
 
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="eyebrow">PRICE LIST</div>
+    <h2>Service <span class="accent">Prices</span></h2>
+    <div class="sub">ဈေးနှုန်း အပြည့်အစုံ — final price depends on your project's details; message me for an exact quote.</div>
+    <div class="pr-grid">
+      <div class="pr-card">
+        <h3>AI Video Creation</h3>
+        <div class="pr-sub">Price per video, by length (seconds)</div>
+        <div class="pr-row"><span class="pl">10–15 sec — Script မပါ</span><span class="pv">30,000 – 50,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">10–15 sec — Script ပါ</span><span class="pv">50,000 – 80,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">15–30 sec — Script မပါ</span><span class="pv">50,000 – 80,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">15–30 sec — Script ပါ</span><span class="pv">80,000 – 120,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">30–60 sec — Script မပါ</span><span class="pv">80,000 – 150,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">30–60 sec — Script ပါ</span><span class="pv">150,000 – 250,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">60–90 sec — Script မပါ</span><span class="pv">150,000 – 220,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">60–90 sec — Script ပါ</span><span class="pv">250,000 – 400,000 Ks</span></div>
+      </div>
+      <div class="pr-card">
+        <h3>Video Editing</h3>
+        <div class="pr-sub">Normal editing — you bring the footage, I do the edit</div>
+        <div class="pr-row"><span class="pl">Basic Video Editing (5–10 min)</span><span class="pv">45,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Short Video / Reels / TikTok</span><span class="pv">25,000 – 50,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">YouTube Video (10–30 min)</span><span class="pv">80,000 – 150,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Advanced Editing / Motion Graphics</span><span class="pv">from 120,000 Ks</span></div>
+      </div>
+      <div class="pr-card">
+        <h3>Graphic Design</h3>
+        <div class="pr-sub">Thumbnails, posters, logos &amp; branding</div>
+        <div class="pr-row"><span class="pl">YouTube Thumbnail</span><span class="pv">15,000 – 30,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Facebook Post / Poster</span><span class="pv">15,000 – 30,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Product Advertising Poster</span><span class="pv">20,000 – 40,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Logo Design</span><span class="pv">50,000 – 150,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Branding Package</span><span class="pv">from 150,000 Ks</span></div>
+      </div>
+      <div class="pr-card">
+        <h3>AI Prompt Services</h3>
+        <div class="pr-sub">Ready-to-use prompts for images &amp; videos</div>
+        <div class="pr-row"><span class="pl">Image Generation Prompt</span><span class="pv">5,000 – 10,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Video Prompt (Single Scene)</span><span class="pv">5,000 – 15,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Multi-Scene Video Prompt</span><span class="pv">20,000 – 50,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Product Commercial Prompt</span><span class="pv">20,000 – 50,000 Ks</span></div>
+        <div class="pr-row"><span class="pl">Character Consistency Prompt</span><span class="pv">20,000 – 50,000 Ks</span></div>
+      </div>
+      <div class="pr-card">
+        <h3>Monthly Content Packages</h3>
+        <div class="pr-sub">Regular content for your page or brand</div>
+        <div class="pr-row"><span class="pl">Starter<small>Short Video 8 ခု + Basic Design</small></span><span class="pv">300,000 Ks / month</span></div>
+        <div class="pr-row"><span class="pl">Creator<small>Video + Thumbnail / Poster</small></span><span class="pv">600,000 Ks / month</span></div>
+        <div class="pr-row"><span class="pl">Business<small>Full Content + Planning + Design</small></span><span class="pv">1,000,000 Ks / month</span></div>
+      </div>
+    </div>
+    <p style="color:var(--mut);font-size:14px;margin-top:14px">Facebook Account Recovery, Social Media Account Service နဲ့ Monetization Service တွေအတွက်တော့ အခြေအနေပေါ် မူတည်လို့ ဈေးကို တိုက်ရိုက် မေးပေးပါ။</p>
+    <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202" style="margin-top:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order on Telegram</a>
+  </section>
+
   <!-- WORK GALLERY -->
   <section id="work">
     <div class="eyebrow">PORTFOLIO</div>
@@ -452,6 +517,12 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <span class="wp">BLOG · AI VIDEO</span>
         <h3>ဖုန်းတစ်လုံးတည်းနဲ့ AI Video စလုပ်နည်း</h3>
         <p>ကွန်ပျူတာ မလိုဘူး၊ camera လည်း မလိုဘူး။ ဖုန်းတစ်လုံးနဲ့ AI Video စလုပ်ဖို့ လိုအပ်တာတွေနဲ့ အဆင့် ၅ ဆင့် workflow အပြည့်အစုံ — ကျွန်တော် နေ့တိုင်း သုံးနေတဲ့ နည်းလမ်းအတိုင်း။</p>
+        <span class="rd">ဆောင်းပါး ဖတ်ရန် →</span>
+      </a>
+      <a class="post-card" href="blog-ai-video-apps.html">
+        <span class="wp">BLOG · AI VIDEO</span>
+        <h3>AI Video လုပ်ဖို့ အကောင်းဆုံး အခမဲ့ App ၅ ခု</h3>
+        <p>ပိုက်ဆံ မကုန်ဘဲ စလုပ်လို့ရတဲ့ AI Video app ၅ ခု — ဘယ် app က ဘာအတွက် ကောင်းလဲ၊ ဘယ်လို တွဲသုံးရမလဲ အပြည့်အစုံ။</p>
         <span class="rd">ဆောင်းပါး ဖတ်ရန် →</span>
       </a>
     </div>
