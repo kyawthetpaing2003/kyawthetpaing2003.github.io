@@ -588,7 +588,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 .agt-bot{background:rgba(255,255,255,.07);color:#eaf2ff;border:1px solid rgba(255,255,255,.1);align-self:flex-start;border-bottom-left-radius:5px}
 .agt-user{background:linear-gradient(135deg,#2563eb,#38e1ff);color:#fff;align-self:flex-end;border-bottom-right-radius:5px}
 .agt-m a{color:#ffcf5c;font-weight:700}
-.agt-chips{display:flex;flex-wrap:nowrap;gap:6px;padding:8px 12px;background:#0a1428;border-top:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}.agt-chips::-webkit-scrollbar{display:none}
+.agt-chips-wrap{display:flex;align-items:center;background:#0a1428;border-top:1px solid rgba(255,255,255,.08);padding:4px 6px}.agt-chips{display:flex;flex-wrap:nowrap;gap:6px;padding:6px 4px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#38e1ff rgba(255,255,255,.08);cursor:grab}.agt-chips::-webkit-scrollbar{height:6px}.agt-chips::-webkit-scrollbar-track{background:rgba(255,255,255,.08);border-radius:3px}.agt-chips::-webkit-scrollbar-thumb{background:#38e1ff;border-radius:3px}.agt-arrow{background:rgba(56,225,255,.15);color:#aee9ff;border:1px solid rgba(56,225,255,.4);border-radius:10px;width:30px;height:36px;font-size:22px;line-height:1;cursor:pointer;flex:0 0 auto}
 .agt-chip{background:rgba(56,225,255,.12);color:#aee9ff;border:1px solid rgba(56,225,255,.35);border-radius:999px;padding:7px 12px;font-size:13.5px;cursor:pointer;font-family:'Noto Sans Myanmar',sans-serif;white-space:nowrap;flex:0 0 auto}
 .agt-in{display:flex;gap:8px;padding:10px 12px;background:#0a1428;border-top:1px solid rgba(255,255,255,.08)}
 #agtText{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff;padding:10px 12px;font-size:14.5px;font-family:'Noto Sans Myanmar',sans-serif;outline:none}
@@ -598,7 +598,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 <div id="agtChatPanel">
   <div class="agt-head"><b>🤖 Ai Global Technology</b><span>ဈေးနှုန်း / ဝန်ဆောင်မှု မေးခွန်းများ — ချက်ချင်း အလိုအလျောက် ဖြေပေးပါတယ်</span></div>
   <div id="agtMsgs"></div>
-  <div class="agt-chips" id="agtChips"></div>
+  <div class="agt-chips-wrap"><button class="agt-arrow" id="agtPrev" aria-label="Previous">&#8249;</button><div class="agt-chips" id="agtChips"></div><button class="agt-arrow" id="agtNext" aria-label="Next">&#8250;</button></div>
   <div class="agt-in"><input id="agtText" type="text" placeholder="မေးခွန်း ရိုက်ထည့်ပါ..."><button id="agtSend">Send</button></div>
 </div>
 <script>
@@ -628,6 +628,14 @@ document.getElementById('agtChatBtn').addEventListener('click',function(){panel.
 CHIPS.forEach(function(c){var b=document.createElement('button');b.className='agt-chip';b.textContent=c;b.addEventListener('click',function(){send(c.replace(/^[^\wက-႟]+/,'').trim()||c);});chips.appendChild(b);});
 document.getElementById('agtSend').addEventListener('click',function(){send(input.value);});
 input.addEventListener('keydown',function(e){if(e.key==='Enter'){send(input.value);}});
+var prevB=document.getElementById('agtPrev'),nextB=document.getElementById('agtNext');
+prevB.addEventListener('click',function(){chips.scrollBy({left:-220,behavior:'smooth'});});
+nextB.addEventListener('click',function(){chips.scrollBy({left:220,behavior:'smooth'});});
+chips.addEventListener('wheel',function(e){e.preventDefault();chips.scrollLeft+=e.deltaY;},{passive:false});
+var dragOn=false,dragX=0,dragL=0;
+chips.addEventListener('pointerdown',function(e){dragOn=true;dragX=e.clientX;dragL=chips.scrollLeft;});
+window.addEventListener('pointermove',function(e){if(dragOn){chips.scrollLeft=dragL-(e.clientX-dragX);}});
+window.addEventListener('pointerup',function(){dragOn=false;});
 })();
 </script>
 
