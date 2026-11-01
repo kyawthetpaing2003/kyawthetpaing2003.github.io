@@ -203,6 +203,15 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 .gate b{display:block;font-family:Poppins,"Noto Sans Myanmar",sans-serif;font-size:16px;line-height:1.35;margin-bottom:3px}
 .gate small{color:var(--mut);font-size:12.5px;line-height:1.45;display:block}
 .gate .dl{display:inline-block;margin-top:11px;margin-right:8px;background:linear-gradient(135deg,#2563eb,#38e1ff);color:#fff;font-weight:700;font-size:13.5px;padding:9px 15px;border-radius:999px;font-family:Poppins,"Noto Sans Myanmar",sans-serif}
+.tool-list{display:grid;gap:9px}
+.tool{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:11px 14px;backdrop-filter:blur(6px)}
+.tool .ic-tile{width:42px;height:42px;flex:0 0 42px;border-radius:13px}
+.tool .ic-tile svg{width:22px;height:22px}
+.tool .tt{flex:1;min-width:0}
+.tool b{display:block;font-family:Poppins,"Noto Sans Myanmar",sans-serif;font-size:15px;line-height:1.3}
+.tool small{color:var(--mut);font-size:12px;line-height:1.4;display:block}
+.tool .go{color:var(--cyan);font-size:22px;font-weight:700;flex:0 0 auto}
+.tool .dl{margin-top:0;margin-right:6px;padding:8px 12px;font-size:12.5px}
 /* work gallery */
 .work-grid{display:grid;gap:12px}
 @media (min-width:560px){.work-grid{grid-template-columns:1fr 1fr 1fr}}
@@ -273,30 +282,38 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <b>AI Video သင်တန်း</b>
         <small>ဖုန်းတစ်လုံးတည်းနဲ့ သင်ယူရန်</small>
       </a>
-      <div class="gate" style="grid-column:1/-1">
-        <span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span>
-        <b>Ai Video Free Generated Tool</b>
-        <small>YouTube Create — Google ရဲ့ အခမဲ့ Video Editor App (AI features တွေပါဝင်)။ ဖုန်းနဲ့ အလွယ်တကူ Download လုပ်နိုင်ပါတယ်။</small>
-        <a class="dl" href="https://apps.apple.com/sg/app/youtube-create-video-editor/id6476327393">📱 iPhone — App Store</a>
-        <a class="dl" href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.producer">🤖 Android — Play Store</a>
-      </div>
-      <a class="gate" href="https://labs.google/fx/tools/flow">
-        <span class="ic-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="15" height="14" rx="3"/><path d="M17.5 10.2 21.5 7.6v8.8l-4-2.6"/></svg></span>
-        <b>Google Flow</b>
-        <small>AI Video ထုတ်ရန် — Veo model · နေ့စဉ် Free credits ရ</small>
-      </a>
-      <a class="gate" href="https://leonardo.ai/">
-        <span class="ic-tile t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9c0 2-1.5 3-3 3h-2.2a2.3 2.3 0 0 0-1.8 3.6c.3.4.5.8.5 1.2 0 .7-.5 1.2-2.5 1.2Z"/><circle cx="7.5" cy="10.5" r="1.1" fill="currentColor"/><circle cx="12" cy="7.2" r="1.1" fill="currentColor"/><circle cx="16.8" cy="10.3" r="1.1" fill="currentColor"/></svg></span>
-        <b>Leonardo AI</b>
-        <small>AI ပုံ ထုတ်ရန် — Free plan ရှိ</small>
-      </a>
-      <a class="gate" href="https://higgsfield.ai/">
-        <span class="ic-tile t-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span>
-        <b>Higgsfield AI</b>
-        <small>AI Video + Character ထုတ်ရန် — Free plan ရှိ</small>
-      </a>
     </div>
     <a class="btn primary" href="https://t.me/UCEXPRLFcGdB8NmrrTut6Wwg" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Join Telegram Channel</a>
+  </section>
+
+  <!-- FREE AI TOOLS -->
+  <section id="freetools">
+    <div class="eyebrow">FREE AI TOOLS · အခမဲ့</div>
+    <h2>Free AI <span class="accent">Tools</span></h2>
+    <div class="sub">အခမဲ့ သုံးလို့ရတဲ့ AI tool တွေ — တစ်ခုခု နှိပ်ပြီး တန်း သုံးနိုင်တယ်။</div>
+    <div class="tool-list">
+      <div class="tool">
+        <span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span>
+        <div class="tt"><b>Ai Video Free Generated Tool</b><small>YouTube Create — Google ရဲ့ အခမဲ့ Video Editor App</small></div>
+        <a class="dl" href="https://apps.apple.com/sg/app/youtube-create-video-editor/id6476327393">📱 iPhone</a>
+        <a class="dl" href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.producer">🤖 Android</a>
+      </div>
+      <a class="tool" href="https://labs.google/fx/tools/flow">
+        <span class="ic-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="15" height="14" rx="3"/><path d="M17.5 10.2 21.5 7.6v8.8l-4-2.6"/></svg></span>
+        <div class="tt"><b>Google Flow</b><small>AI Video ထုတ်ရန် — Veo model · နေ့စဉ် Free credits ရ</small></div>
+        <span class="go">›</span>
+      </a>
+      <a class="tool" href="https://leonardo.ai/">
+        <span class="ic-tile t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9c0 2-1.5 3-3 3h-2.2a2.3 2.3 0 0 0-1.8 3.6c.3.4.5.8.5 1.2 0 .7-.5 1.2-2.5 1.2Z"/><circle cx="7.5" cy="10.5" r="1.1" fill="currentColor"/><circle cx="12" cy="7.2" r="1.1" fill="currentColor"/><circle cx="16.8" cy="10.3" r="1.1" fill="currentColor"/></svg></span>
+        <div class="tt"><b>Leonardo AI</b><small>AI ပုံ ထုတ်ရန် — Free plan ရှိ</small></div>
+        <span class="go">›</span>
+      </a>
+      <a class="tool" href="https://higgsfield.ai/">
+        <span class="ic-tile t-gold"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></svg></span>
+        <div class="tt"><b>Higgsfield AI</b><small>AI Video + Character ထုတ်ရန် — Free plan ရှိ</small></div>
+        <span class="go">›</span>
+      </a>
+    </div>
   </section>
 
   <!-- MAIN SERVICES -->
