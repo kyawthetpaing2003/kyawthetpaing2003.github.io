@@ -50,11 +50,12 @@ h1,h2,h3,.logo{font-family:Poppins,"Noto Sans Myanmar",sans-serif}
 
 /* header */
 header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(7,13,26,.78);border-bottom:1px solid var(--line)}
-.hbar{max-width:720px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hbar{max-width:720px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .logo{font-weight:700;font-size:17px;letter-spacing:.3px;display:flex;align-items:center;gap:9px}
 .logo .dot{width:34px;height:34px;border-radius:11px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:15px;color:#04222e;font-weight:800;box-shadow:0 6px 18px rgba(56,225,255,.35)}
 .logo em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .bookbtn{background:var(--grad);color:#03222e;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14.5px;min-height:44px;display:inline-flex;align-items:center;box-shadow:0 8px 22px rgba(56,225,255,.3)}
+.navlink{color:var(--cyan);font-weight:600;font-size:14.5px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
 
 /* hero */
 .hero{padding:26px 0 4px;text-align:center}
@@ -259,6 +260,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 <header>
   <div class="hbar">
     <div class="logo"><span class="dot">Ai</span><span>Ai <em>Global Technology</em></span></div>
+    <a class="navlink" href="phones.html">📱 Phones</a>
     <a class="bookbtn" href="https://t.me/AGTREMOTECRAFT202">Book a Service</a>
   </div>
 </header>
@@ -639,7 +641,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
     </div>
   </section>
 
-  <footer>© 2026 Ai Global Technology · Mr Kyaw Thet Paing<br>Bangkok, Thailand<br><a href="brand.html" style="color:var(--cyan);font-weight:600">Brand Characters &amp; Copyright</a></footer>
+  <footer>© 2026 Ai Global Technology · Mr Kyaw Thet Paing<br>Bangkok, Thailand<br><a href="phones.html" style="color:var(--cyan);font-weight:600">Phones</a> · <a href="brand.html" style="color:var(--cyan);font-weight:600">Brand Characters &amp; Copyright</a></footer>
 </div>
 <a class="float-order" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Order a Service</a>
 <script>
