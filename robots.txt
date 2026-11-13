@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kyawthetpaing2003.github.io/sitemap.xml
-# deploy refresh
+Sitemap: https://aiglobaltechnology.github.io/sitemap.xml
